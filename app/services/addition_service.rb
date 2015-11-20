@@ -8,6 +8,7 @@ class AdditionService
   end
 
   def process
+    Rails.logger.info "process " * 5
     number1 + number2
   end
 

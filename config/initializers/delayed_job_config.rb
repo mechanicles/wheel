@@ -10,6 +10,12 @@ Delayed::Worker.read_ahead          = 10
 
 Delayed::Worker.delay_jobs          = !Rails.env.test?
 
+Delayed::Worker.logger = Logger.new(File.join(Rails.root, 'log', 'delayed_job.log'))
+if Delayed::Worker.delay_jobs && ($PROGRAM_NAME =~ /delayed_job/)
+  ActiveRecord::Base.logger = Delayed::Worker.logger
+  Rails.logger = Delayed::Worker.logger
+end
+
 # In production have default number of attempts ( which I think is 30 )
 if !Rails.env.production?
   Delayed::Worker.max_attempts        = 3
