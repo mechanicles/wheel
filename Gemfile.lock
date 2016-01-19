@@ -17,11 +17,25 @@ GIT
       sass-rails
 
 GIT
+  remote: git://github.com/bigbinary/boxy-cap.git
+  revision: 530644a162ea8deab50e94f832b7e4ba2296ea55
+  specs:
+    boxy-cap (0.0.19)
+
+GIT
   remote: git://github.com/bigbinary/mail_interceptor.git
   revision: 3c6e9689e78a8edbf589d284b03a0146af421847
   specs:
     mail_interceptor (0.0.5)
       activesupport
+
+GIT
+  remote: git://github.com/capistrano/rails.git
+  revision: 384a6b4d275fd193a3dd20d14449efb20588a259
+  specs:
+    capistrano-rails (1.1.5)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
 
 GIT
   remote: git://github.com/mhfs/devise-async.git
@@ -103,6 +117,16 @@ GEM
     bullet (4.14.10)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.9.0)
+    capistrano (3.4.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rbenv (2.0.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -388,6 +412,9 @@ GEM
     sprockets-es6 (0.6.2)
       babel-transpiler
       sprockets (>= 3.0.0)
+    sshkit (1.8.1)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
@@ -420,8 +447,13 @@ DEPENDENCIES
   activeadmin!
   arel
   bootstrap-sass (~> 3.3.3)
+  boxy-cap!
   browser
   bullet
+  capistrano
+  capistrano-bundler
+  capistrano-rails!
+  capistrano-rbenv
   carrierwave
   daemons
   delayed_job_active_record
@@ -450,10 +482,11 @@ DEPENDENCIES
   spring
   sprockets-es6
   sprockets-rails!
+  sshkit
   thin
   uglifier (>= 2.7.1)
   unicorn
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

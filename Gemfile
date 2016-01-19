@@ -116,3 +116,11 @@ end
 # Attach comments to Active Record queries
 gem 'marginalia'
 
+
+gem 'boxy-cap', github: 'bigbinary/boxy-cap'
+gem 'capistrano'
+gem 'capistrano-rbenv'
+gem 'capistrano-rails', github: 'capistrano/rails'
+gem 'capistrano-bundler'
+gem 'sshkit'
+gem 'unicorn'
