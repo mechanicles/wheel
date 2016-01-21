@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :rbenv_type, :user # or :system, depends on your rbenv setup
-set :rbenv_ruby, '2.2.2'
+set :rbenv_ruby, '2.2.3'
 
 #TODO: Check the application name
 set :application, 'rahul'
