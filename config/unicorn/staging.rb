@@ -20,11 +20,11 @@ worker_processes 1
 
 # Help ensure your application will always spawn in the symlinked
 # "current" directory that Capistrano sets up.
-working_directory "/data/apps/bigwheel/current" # available in 0.94.0+
+working_directory "/data/apps/rahul/current" # available in 0.94.0+
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "/data/apps/bigwheel/shared/tmp/sockets/unicorn.sock", :backlog => 64
+listen "/data/apps/rahul/shared/tmp/sockets/unicorn.sock", :backlog => 64
 # listen 8080, :tcp_nopush => true
 
 # After the timeout is exhausted, the unicorn worker will be killed and a new
@@ -37,13 +37,13 @@ listen "/data/apps/bigwheel/shared/tmp/sockets/unicorn.sock", :backlog => 64
 timeout 40
 
 
-pid "/data/apps/bigwheel/shared/tmp/pids/unicorn.pid"
+pid "/data/apps/rahul/shared/tmp/pids/unicorn.pid"
 
 # By default, the Unicorn logger will write to stderr.
 # Additionally, other applications/frameworks log to stderr or stdout,
 # so prevent them from going to /dev/null when daemonized here:
-stderr_path "/data/apps/bigwheel/shared/log/unicorn.stderr.log"
-stdout_path "/data/apps/bigwheel/shared/log/unicorn.stdout.log"
+stderr_path "/data/apps/rahul/shared/log/unicorn.stderr.log"
+stdout_path "/data/apps/rahul/shared/log/unicorn.stdout.log"
 
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow
 # http://stackoverflow.com/questions/18124417/how-do-i-tell-if-ruby-2-0-is-copy-on-write-friendly

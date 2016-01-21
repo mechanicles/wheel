@@ -5,10 +5,10 @@ set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.2.2'
 
 #TODO: Check the application name
-set :application, 'bigwheel'
+set :application, 'rahul'
 
 #TODO: Replace with valid github url
-set :repo_url, 'git@github.com:bigbinary/wheel.git'
+set :repo_url, 'git@github.com:RahulMahale/wheel.git'
 
 # Default branch is :master
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -34,7 +34,7 @@ set :template_dir, 'config/deploy/templates/database_pg.yml.erb'
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'config/settings',
                                                'vendor/bundle', 'public/system', 'db/backups', 'uploads')
-
+set :template_dir, 'config/deploy/templates/
 
 set :keep_releases, 5
 
