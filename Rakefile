@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Crails::Application.load_tasks
+Wheel::Application.load_tasks

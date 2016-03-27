@@ -1,4 +1,4 @@
-Crails::Application.routes.draw do
+Wheel::Application.routes.draw do
 
   devise_for :users, controllers: { registrations: 'registrations' }
 
